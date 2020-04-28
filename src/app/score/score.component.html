@@ -1,0 +1,26 @@
+<div class="card bg-light mb-3">
+    <div class="card-header">
+        <div class="row justify-content-center">
+            <h1>{{ name }}</h1>
+        </div>
+    </div>
+    <div class="card-body m-5">
+
+        <div class="row justify-content-center">
+            <div class="score">
+                <h1>{{ score }}</h1>
+            </div>
+        </div>
+
+        <div class="input-group mb-3 pt-5">
+            <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary" type="button" (click)="subtractScore()">-</button>
+            </div>
+            <input type="number" class="form-control" [(ngModel)]="change">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" (click)="addScore()">+</button>
+            </div>
+        </div>
+
+    </div>
+</div>
