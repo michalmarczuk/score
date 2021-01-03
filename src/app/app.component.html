@@ -1,10 +1,9 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="row justify-content-end m-4">
-      <app-score name="Kamilka"></app-score>
+
+    <div class="row justify-content-start m-4" *ngFor="let player of players">
+      <app-score (scoreChanged)="updateStatus($event)" name={{player.name}} [isWinning]="player.isWinning"></app-score>
     </div>
-    <div class="row justify-content-start m-4">
-      <app-score name="Michał"></app-score>
-    </div>
+
   </div>
 </div>
